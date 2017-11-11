@@ -36,6 +36,9 @@
 					.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 						$("#head").removeClass("wobble animated");
 				});
+
+				var audio = document.getElementById("ouch");
+				audio.play();
 			});
 
 
@@ -65,6 +68,9 @@
 					.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 						$("#head").removeClass("wobble animated");
 				});
+
+				var audio = document.getElementById("ouch");
+				audio.play();
 			});
 
 			$("#head").click(function() {
@@ -73,11 +79,16 @@
 					.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 						$("#head").removeClass("wobble animated");
 				});
+
+				var audio = document.getElementById("no");
+				audio.play();
 			});
 
 		});
 
 	</script>
+	<audio id="ouch" src="ouch.mp3"></audio>
+	<audio id="no" src="uhoh.mp3"></audio>
 </head>
 <body>
 	<div class="content">
@@ -99,6 +110,7 @@
 		
 
 	</div>
+	<!-- Sound effects obtained from https://www.zapsplat.com -->
 	
 </body>
 </html>
