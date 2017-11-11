@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="animate.css"/>
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(document).ready(function() { 
+			
+			$("#right-foot").click(function(){
+				$("#right-foot").removeClass("bounceInDown animated");
+				$("#right-leg").removeClass("bounceInDown animated");
+
+				$("#right-foot").addClass("rubberBand animated")
+					.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+						$("#right-foot").removeClass("rubberBand animated");
+				});
+				
+				$("#right-leg").addClass("rubberBand animated")
+					.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+						$("#right-leg").removeClass("rubberBand animated");
+				});
+
+				$(".arm").removeClass("bounceInDown animated");
+				$(".arm").addClass("rubberBand animated")
+					.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+						$(".arm").removeClass("rubberBand animated");
+				});
+;
+
+				$("#head").removeClass("bounceInDown animated");
+				$("#head").addClass("wobble animated")
+					.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+						$("#head").removeClass("wobble animated");
+				});
+			});
+
+
+			$("#left-foot").click(function(){
+				$("#left-foot").removeClass("bounceInDown animated");
+				$("#left-leg").removeClass("bounceInDown animated");
+
+				$("#left-foot").addClass("rubberBand animated")
+					.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+						$("#left-foot").removeClass("rubberBand animated");
+				});
+				
+				$("#left-leg").addClass("rubberBand animated")
+					.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+						$("#left-leg").removeClass("rubberBand animated");
+				});	
+
+				$(".arm").removeClass("bounceInDown animated");
+				$(".arm").addClass("rubberBand animated")
+					.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+						$(".arm").removeClass("rubberBand animated");
+				});
+
+
+				$("#head").removeClass("bounceInDown animated");
+				$("#head").addClass("wobble animated")
+					.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+						$("#head").removeClass("wobble animated");
+				});
+			});
+
+			$("#head").click(function() {
+				$("#head").removeClass("bounceInDown animated");
+				$("#head").addClass("wobble animated")
+					.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+						$("#head").removeClass("wobble animated");
+				});
+			});
+
+		});
+
+	</script>
+</head>
+<body>
+	<h2 id="heading">Test</h2>
+	<div class="content">
+
+		<div id="head" name="head" class="bounceInDown animated"></div>
+		<div id="left-arm" name="left-arm" class="arm bounceInDown animated"></div>
+		<div id="body" class="bounceInDown animated"></div>
+		<div id="right-arm" name="right-arm" class="arm bounceInDown animated"></div><br/>
+		<div class="legs">
+			<div id="left-leg" name="left-leg" class="bounceInDown animated leg"></div>  
+			<div class="leg-interval bounceInDown animated">&nbsp;</div>
+			<div id="right-leg" name="right-leg" class="bounceInDown animated leg"></div>  
+		</div>
+		<div class="feet">
+			<div id="left-foot" name="left-foot" class="bounceInDown animated foot"></div>
+			<div class="foot-interval bounceInDown animated">&nbsp;</div>
+			<div id="right-foot" name="right-foot" class="bounceInDown animated foot"></div>
+		</div>
+		
+
+	</div>
+	
+</body>
+</html>
